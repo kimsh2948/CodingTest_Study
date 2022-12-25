@@ -16,7 +16,6 @@ count = 0
 answer = []
 
 def dfs(x, y, count):
-    print(x, y)
     count += 1
     visited[x] = 1
     if x == y:
