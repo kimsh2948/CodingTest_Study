@@ -12,7 +12,7 @@ def bfs(n, k):
             print(visited[v])
             break
         for i in (v + 1, v - 1, 2 * v):
-            if 0 < i <= 100000 and visited[i] == 0:
+            if 0 <= i <= 100000 and visited[i] == 0:
                 queue.append(i)
                 visited[i] = visited[v] + 1
 

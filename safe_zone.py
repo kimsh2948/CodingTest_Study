@@ -35,7 +35,7 @@ def bfs(x, y, visited, rain):
 
 result = 0
 
-for wid in range(2, max_num+1):
+for wid in range(0, max_num+1):
     rain = wid
     visited = [[0] * (n)for _ in range(n)]
     count = 0
