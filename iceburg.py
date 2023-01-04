@@ -36,19 +36,22 @@ def bfs(x, y):
     return 1
 
 year = 0
+check = False
 while True:
     visited = [[0] * m for _ in range(n)]
-    count = 0
     result = []
     for i in range(n):
         for j in range(m):
             if graph[i][j] != 0 and visited[i][j] == 0:
-                count += bfs(i, j)
-                result.append(count)
+                result.append(bfs(i, j))
+    if len(result) == 0:
+        break
     if len(result) > 1:
-        print(year)
+        check = True
         break
     year += 1
 
-if count < 2:
+if check:
+    print(year)
+else:
     print(0)
